@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>MyTube</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MyTube - Home</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><h1>MyTube</h1></header>
-  <input type="text" placeholder="Search..." />
-  <div class="video-grid">
-    <div class="video-card" onclick="playVideo('videos/sample.mp4')">
-      <video src="videos/sample.mp4" muted></video>
-      <p>Sample Video</p>
-    </div>
-  </div>
+  <header class="topbar">
+    <div class="logo">MyTube</div>
+    <input id="searchInput" type="text" placeholder="Search" />
+    <button id="searchBtn">🔍</button>
+  </header>
+
+  <main class="main-content">
+    <section class="video-player-section">
+      <video id="videoPlayer" controls autoplay>
+        <source src="videos/sample.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h2 id="videoTitle">Sample Video</h2>
+    </section>
+
+    <aside class="video-list-section">
+      <div id="videoList"></div>
+    </aside>
+  </main>
+
   <script src="main.js"></script>
 </body>
 </html>
