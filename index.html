@@ -2,27 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MyTube - Home</title>
+  <title>MyTube</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="logo">MyTube</div>
-    <input id="searchInput" type="text" placeholder="Search">
-    <button id="searchBtn">🔍</button>
-    <button onclick="location.href='upload.html'">⬆ Upload</button>
-    <button onclick="location.href='record.html'">⏺ Record</button>
-    <button onclick="location.href='login.html'">Login</button>
+  <header>
+    <h1>MyTube</h1>
+    <input type="text" id="search" placeholder="Search videos...">
   </header>
-  <main class="main-content">
-    <section class="video-player-section">
-      <video id="videoPlayer" controls>
-        <source src="" type="video/mp4">
-      </video>
-      <h2 id="videoTitle">Select a video</h2>
-    </section>
-    <aside class="video-list-section" id="videoList"></aside>
-  </main>
+  <main id="video-list"></main>
+
   <script src="main.js"></script>
 </body>
 </html>
