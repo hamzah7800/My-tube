@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch Video</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MyTube</h1>
+    <a href="index.html">← Back to Home</a>
+  </header>
+  <main>
+    <video id="player" controls autoplay></video>
+    <div id="video-details"></div>
+    <section id="comments">
+      <h3>Comments</h3>
+      <textarea placeholder="Leave a comment..."></textarea>
+      <button onclick="addComment()">Post</button>
+      <ul id="comment-list"></ul>
+    </section>
+  </main>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const filename = urlParams.get('v');
+    const video = document.getElementById("player");
+    video.src = `videos/${filename}`;
+    document.getElementById("video-details").innerText = filename;
+
+    function addComment() {
+      const text = document.querySelector("textarea").value;
+      if (!text) return;
+      const li = document.createElement("li");
+      li.textContent = text;
+      document.getElementById("comment-list").appendChild(li);
+      document.querySelector("textarea").value = "";
+    }
+  </script>
+</body>
+</html>
