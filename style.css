@@ -1,14 +1,59 @@
-body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
-.topbar { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 10px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.logo { font-size: 24px; color: red; font-weight: bold; }
-input[type=text] { padding: 8px; width: 200px; }
-button { padding: 8px 12px; background: red; color: #fff; border: none; cursor: pointer; }
-.main-content { display: flex; padding: 20px; }
-.video-player-section { flex: 2; margin-right: 20px; }
-.video-player-section video { width: 100%; border-radius: 4px; }
-.video-list-section { flex: 1; }
-.video-card { display: flex; margin-bottom: 10px; cursor: pointer; }
-.video-card img { width: 120px; height: 70px; object-fit: cover; }
-.video-info { margin-left: 10px; }
-.center-box { max-width: 400px; margin: 100px auto; text-align: center; }
-.center-box input, .center-box button { display: block; width: 100%; padding: 10px; margin: 10px 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+}
+
+header {
+  background: #ff0000;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-card {
+  width: 300px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+}
+
+.video-card .title {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.login {
+  max-width: 300px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login input {
+  padding: 10px;
+}
